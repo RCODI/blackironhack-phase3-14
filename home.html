@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SickNo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="http://example.com/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JAVASCRIPT -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD0m-WfFYXMz1wAPCdJGI7LzuzhaFcOxI&libraries=places&callback=initialize"
+      async defer>
+    </script>
+    <script src="js/main.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	   <script src="js/RadarChart.js"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SickNo</a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+      <h1>SickNo</h1>
+      <p>Track sickness, viruses, diseases wherever you go.</p>
+      <form id="locationSearchForm" class="form-inline">
+        <!-- <input id="pac-input" class="controls" type="text" placeholder="Enter a location"> -->
+          <input id="pac-input" type="location" class="controls form-control" size="50" placeholder="Enter traveling destination">
+          <!-- <button id="locationSearch" type="button" class="btn btn-danger">Search</button> -->
+      </form>
+      <!-- date picker -->
+      <input type="date" id="date" size="10" name="date" title="Date" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="MM/DD/YYYY">
+      <!-- data -->
+      <div class="dataChart">
+        <div id="chart"></div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <!-- Google Maps -->
+
+  </div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
